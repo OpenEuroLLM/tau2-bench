@@ -1,0 +1,42 @@
+# Checkpoints to evaluate via run_evals_parallel.sh or run_all_evals.sh
+# Format: <name>|<model_path>
+#   <name>       used for the output dir: data/simulations/olmo3_evals/eval_<name>
+#   <model_path> HF id or absolute local path
+# Lines starting with '#' and blank lines are ignored.
+
+# ── Active: phase2 centerpiece v2 variants (trained on NEW data) ────────────
+phase2-centerpiece-AMS-v2-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-centerpiece-AMS-v2-fc-sft
+phase2-centerpiece-turndrop-v2-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-centerpiece-turndrop-v2-fc-sft
+phase2-centerpiece-random-v2-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-centerpiece-random-v2-fc-sft
+
+# ── Previously evaluated centerpiece variants (v1, all complete on disk) ────
+#phase2-centerpiece-turndrop-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-centerpiece-turndrop-fc-sft
+#phase2-centerpiece-AMS-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-centerpiece-AMS-fc-sft
+#phase2-centerpiece-raw-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-centerpiece-raw-fc-sft
+#phase2-centerpiece-random-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-centerpiece-random-fc-sft
+
+# ── Allen-AI Olmo-3-7B-Instruct family from HuggingFace (already evaluated) ─
+# instruct-sft  — checkpoint after the SFT stage only (intermediate release)
+# instruct      — final checkpoint after the RL stage (full Instruct release)
+#instruct-sft|allenai/Olmo-3-7B-Instruct-SFT
+#instruct|allenai/Olmo-3-7B-Instruct
+
+# ── Previously evaluated checkpoints (results already in data/simulations) ──
+# These are kept for history. Auto-resume would skip them anyway since their
+# results.json files are complete. Uncomment if you want to re-run any.
+#phase2-a1-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a1-fc-sft
+#phase2-a1prime-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a1prime-fc-sft
+#phase2-a2-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a2-fc-sft
+#phase2-a2prime-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a2prime-fc-sft
+#phase2-p1-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-p1-fc-sft
+#phase2-q4-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-q4-fc-sft
+#phase2-q1-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-q1-fc-sft
+#phase2-a3-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a3-fc-sft
+#phase2-q2-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-q2-fc-sft
+#phase2-a5-search-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a5-search-fc-sft
+#phase2-a5-ia-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a5-ia-fc-sft
+#phase2-a5-ia-ams-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a5-ia-ams-fc-sft
+#phase2-a5-ia-random-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a5-ia-random-fc-sft
+#phase2-a7-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a7-fc-sft
+#phase2-a7-ams-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a7-ams-fc-sft
+#phase2-a7-random-fc-sft|/mnt/nfs/ytahtah/bfcl/phase2-a7-random-fc-sft
